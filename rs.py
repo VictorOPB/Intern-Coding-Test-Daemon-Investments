@@ -28,5 +28,5 @@ def rs(stock_prices, lookback_period):
             avg_loss = (prev_avg_loss * (lookback_period - 1) + loss) / lookback_period
         prev_avg_gain = avg_gain
         prev_avg_loss = avg_loss
-    rs = avg_gain/avg_loss
+    rs = round(avg_gain/avg_loss, 2)
     return rs
